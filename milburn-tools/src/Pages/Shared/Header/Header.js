@@ -37,6 +37,13 @@ const Header = () => {
           >
             Blogs
           </Link>
+          <Link
+            to="/portfolio"
+            href="#"
+            class="px-2 py-1 text-sm font-medium text-gray-700 transition-colors duration-200 transform rounded dark:text-gray-200 hover:bg-gray-900 hover:text-gray-100 md:mx-2"
+          >
+            My Portfolio
+          </Link>
         </nav>
         <button className=" inline-flex items-center btn btn-secondary border-0 py-1 px-3 focus:outline-none hover:btn-accent rounded text-base mt-4 md:mt-0">
           Login
