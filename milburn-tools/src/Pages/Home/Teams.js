@@ -7,11 +7,11 @@ import natasha from '../../Images/natasha.png'
 const Teams = () => {
     return (
        
-        <section className="bg-white dark:bg-gray-900">
+        <section className="bg-white  mb-10">
             <div className="container px-6 py-10 mx-auto">
-                <h1 className="text-3xl font-semibold text-center text-gray-800 capitalize lg:text-4xl dark:text-white">Our Executive Team</h1>
+                <h1 className="text-3xl font-semibold text-center text-gray-800 capitalize lg:text-4xl dark:text-black">Our Executive Team</h1>
                 
-                <p className="max-w-2xl mx-auto my-6 text-center text-gray-500 dark:text-gray-300">
+                <p className="max-w-2xl mx-auto my-6 text-center text-black dark:text-black">
                     Milburn Tools is a very well organized industry. Its members and owners are very friendly and helpful. They try to help and deliver good products to their customers.
                 </p>
                 
