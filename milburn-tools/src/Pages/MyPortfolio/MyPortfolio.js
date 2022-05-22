@@ -15,15 +15,12 @@ const MyPortfolio = () => {
               Who I am
             </h2>
 
-            <p class="mt-4 text-gray-500 dark:text-gray-400 lg:max-w-md">
-              Hi I am Rafid, software engineer{" "}
+            <p class="mt-4 text-gray-500 dark:text-gray-600 lg:max-w-md">
+              Hi I am Rafid, Front-End Developer{" "}
               <p class="font-bold text-blue-600 dark:text-blue-400" href="#">
                 @rafidmahin
               </p>{" "}
-              , Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum
-              in sed non alias, fugiat, commodi nemo ut fugit corrupti dolorem
-              sequi ex veniam consequuntur id, maiores beatae ipsa omnis
-              aliquam?
+              , An enthusiastic undergraduate eager to contribute to team success through excellent organizational skills, time management and hard to work. Seeking a career opportunity with a goal to develop myself into a successful individual by enabling my skills and capabilities. Currently I am searching for internship, part-time employment or project work to acquire experience for upcoming challenges.
             </p>
 
             <div class="flex items-center mt-6 -mx-2">
