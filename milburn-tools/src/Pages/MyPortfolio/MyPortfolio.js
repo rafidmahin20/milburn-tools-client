@@ -88,44 +88,78 @@ const MyPortfolio = () => {
         </div>
       </section>
       <section className="p-10">
-        <ol class="border-l border-gray-300">
+          <h1 className="text-2xl mb-3 font-bold uppercase">Educational Background</h1>
+        <ol className="border-l border-gray-300">
           <li>
-            <div class="flex flex-start items-center pt-3">
-              <div class="bg-gray-300 w-2 h-2 rounded-full -ml-1 mr-3"></div>
+            <div className="flex flex-start items-center pt-3">
+              <div className="bg-gray-300 w-2 h-2 rounded-full -ml-1 mr-3"></div>
             </div>
-            <div class="mt-0.5 ml-4 mb-6">
-              <h4 class="text-gray-800 font-semibold text-xl mb-1.5">
+            <div className="mt-0.5 ml-4 mb-6">
+              <h4 className="text-gray-800 font-semibold text-xl mb-1.5">
                 Bsc.CSE
               </h4>
-              <p class="text-gray-500 mb-3">
+              <p className="text-gray-500 mb-3">
                 American International University Bangladesh
               </p>
               <span>CGPA-3.63</span>
             </div>
           </li>
           <li>
-            <div class="flex flex-start items-center pt-2">
-              <div class="bg-gray-300 w-2 h-2 rounded-full -ml-1 mr-3"></div>
+            <div className="flex flex-start items-center pt-2">
+              <div className="bg-gray-300 w-2 h-2 rounded-full -ml-1 mr-3"></div>
             </div>
-            <div class="mt-0.5 ml-4 mb-6">
-              <h4 class="text-gray-800 font-semibold text-xl mb-1.5">HSC</h4>
-              <p class="text-gray-500 mb-3">
+            <div className="mt-0.5 ml-4 mb-6">
+              <h4 className="text-gray-800 font-semibold text-xl mb-1.5">HSC</h4>
+              <p className="text-gray-500 mb-3">
                 Saint Joseph Higher Secondary School
               </p>
               <span>GPA-5.00</span>
             </div>
           </li>
           <li>
-            <div class="flex flex-start items-center pt-2">
-              <div class="bg-gray-300 w-2 h-2 rounded-full -ml-1 mr-3"></div>
+            <div className="flex flex-start items-center pt-2">
+              <div className="bg-gray-300 w-2 h-2 rounded-full -ml-1 mr-3"></div>
             </div>
-            <div class="mt-0.5 ml-4 pb-5">
-              <h4 class="text-gray-800 font-semibold text-xl mb-1.5">SSC</h4>
-              <p class="text-gray-500 mb-3">Feni Govt. Pilot High School</p>
+            <div className="mt-0.5 ml-4 pb-5">
+              <h4 className="text-gray-800 font-semibold text-xl mb-1.5">SSC</h4>
+              <p className="text-gray-500 mb-3">Feni Govt. Pilot High School</p>
               <span>GPA-5.00</span>
             </div>
           </li>
         </ol>
+      </section>
+      <section className="p-10">
+          <h1 className="text-2xl font-bold text-center mb-10 uppercase">Skills</h1>
+      <ol className="border-l md:border-l-0 md:border-t border-gray-300 md:flex md:justify-center md:gap-6">
+  <li>
+    <div className="flex md:block flex-start items-center pt-2 md:pt-0">
+      <div className="bg-gray-300 w-2 h-2 rounded-full -ml-1 md:ml-0 mr-3 md:mr-0 md:-mt-1"></div>
+    </div>
+    <div className="mt-0.5 ml-4 md:ml-0 pb-5">
+      <h4 className="text-gray-800 font-semibold text-xl mb-1.5">HTML</h4>
+      <p className="text-gray-500 mb-3">I have the basic knowledge of html and html5.</p>
+    </div>
+  </li>
+  <li>
+    <div className="flex md:block flex-start items-center pt-2 md:pt-0">
+      <div className="bg-gray-300 w-2 h-2 rounded-full -ml-1 md:ml-0 mr-3 md:mr-0 md:-mt-1"></div>
+    </div>
+    <div className="mt-0.5 ml-4 md:ml-0 pb-5">
+      <h4 className="text-gray-800 font-semibold text-xl mb-1.5">Title of section 2</h4>
+      <p className="text-gray-500 mb-3">Libero expedita explicabo eius fugiat quia aspernatur autem laudantium error architecto recusandae natus sapiente sit nam eaque, consectetur porro molestiae ipsam an deleniti.</p>
+    </div>
+  </li>
+  <li>
+    <div className="flex md:block flex-start items-center pt-2 md:pt-0">
+      <div className="bg-gray-300 w-2 h-2 rounded-full -ml-1 md:ml-0 mr-3 md:mr-0 md:-mt-1"></div>
+      <p className="text-gray-500 text-sm mt-2">25.11.2021</p>
+    </div>
+    <div className="mt-0.5 ml-4 md:ml-0 pb-5">
+      <h4 className="text-gray-800 font-semibold text-xl mb-1.5">Title of section 3</h4>
+      <p className="text-gray-500 mb-3">Voluptatibus temporibus esse illum eum aspernatur, fugiat suscipit natus! Eum corporis illum nihil officiis tempore. Excepturi illo natus libero sit doloremque, laborum molestias rerum pariatur quam ipsam necessitatibus incidunt, explicabo.</p>
+    </div>
+  </li>
+</ol>
       </section>
     </main>
   );
