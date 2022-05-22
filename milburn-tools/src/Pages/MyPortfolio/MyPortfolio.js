@@ -202,11 +202,6 @@ const MyPortfolio = () => {
                         <p className="text-gray-500 dark:text-gray-300">
                             its a apple ecosystem websites meaning u can find apples products here like iphone macs macbooks airpods. Where customers can purchase products.
                         </p>
-
-                        <p href="#" className="flex items-center -mx-1 text-sm text-blue-500 capitalize transition-colors duration-200 transform dark:text-blue-400 hover:underline hover:text-blue-600 dark:hover:text-blue-500">
-                            <span className="mx-1">read more</span>
-                            <svg class="w-4 h-4 mx-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                        </p>
                     </div>
 
                     <div className="flex flex-col items-center p-6 space-y-3 text-center bg-gray-100 rounded-xl dark:bg-gray-800">
@@ -221,11 +216,6 @@ const MyPortfolio = () => {
                         <p className="text-gray-500 dark:text-gray-300">
                             Its a website of indenpendant phothographer. Where u can see his works and customers reviews. And u can see his packages and can book him for your weddings.
                         </p>
-
-                        <p href="#" className="flex items-center -mx-1 text-sm text-blue-500 capitalize transition-colors duration-200 transform dark:text-blue-400 hover:underline hover:text-blue-600 dark:hover:text-blue-500">
-                            <span className="mx-1">read more</span>
-                            <svg className="w-4 h-4 mx-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                        </p>
                     </div>
 
                     <div className="flex flex-col items-center p-6 space-y-3 text-center bg-gray-100 rounded-xl dark:bg-gray-800">
@@ -239,11 +229,6 @@ const MyPortfolio = () => {
 
                         <p className="text-gray-500 dark:text-gray-300">
                             Its a website of a product called playstation. Where u can see the producs functions and the customer reviews.
-                        </p>
-
-                        <p href="#" className="flex items-center -mx-1 text-sm text-blue-500 capitalize transition-colors duration-200 transform dark:text-blue-400 hover:underline hover:text-blue-600 dark:hover:text-blue-500">
-                            <span className="mx-1">read more</span>
-                            <svg className="w-4 h-4 mx-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
                         </p>
                     </div>
                 </div>
