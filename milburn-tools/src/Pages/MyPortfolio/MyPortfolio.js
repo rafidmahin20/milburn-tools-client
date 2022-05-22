@@ -4,7 +4,7 @@ import me from "../../Images/me.png";
 
 const MyPortfolio = () => {
   return (
-    <main>
+    <main className="px-12">
       <section class="bg-white  mt-20 mb-10">
         <Helmet>
           <title>My Portfolio - Milburn Tools</title>
