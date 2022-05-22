@@ -16,7 +16,7 @@ const Teams = () => {
                 </p>
                 
                 <div className="grid grid-cols-1 gap-8 mt-8 xl:mt-16 md:grid-cols-2 xl:grid-cols-4">
-                    <div className="flex flex-col items-center p-8 transition-colors duration-200 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-blue-600 dark:border-gray-700 dark:hover:border-transparent">
+                    <div className="flex flex-col items-center p-8 transition-colors duration-200 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-red-600 dark:border-gray-700 dark:hover:border-transparent">
                         <img className="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300" src={tony} alt=""/>
                         
                         <h1 className="mt-4 text-2xl font-semibold capitalize dark:text-red-600 group-hover:text-white">Tony Stark</h1>
@@ -57,9 +57,9 @@ const Teams = () => {
                     <div className="flex flex-col items-center p-8 transition-colors duration-200 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-blue-600 dark:border-gray-700 dark:hover:border-transparent">
                         <img className="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300" src={steve} alt=""/>
                         
-                        <h1 className="mt-4 text-2xl font-semibold text-gray-700 capitalize dark:text-white group-hover:text-white">Steve Rogers</h1>
+                        <h1 className="mt-4 text-2xl font-semibold text-gray-700 capitalize dark:text-blue-600 group-hover:text-white">Steve Rogers</h1>
                         
-                        <p className="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">Lead Developer</p>
+                        <p className="mt-2 text-gray-500 capitalize dark:text-black group-hover:text-gray-300">Lead Developer</p>
                         
                         <div className="flex mt-3 -mx-2">
                             <p href="#" className="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white" aria-label="Reddit">
@@ -92,12 +92,12 @@ const Teams = () => {
                         </div>
                     </div>
 
-                    <div className="flex flex-col items-center p-8 transition-colors duration-200 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-blue-600 dark:border-gray-700 dark:hover:border-transparent">
+                    <div className="flex flex-col items-center p-8 transition-colors duration-200 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-black dark:border-gray-700 dark:hover:border-transparent">
                         <img className="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300" src={natasha} alt=""/>
                         
-                        <h1 className="mt-4 text-2xl font-semibold text-gray-700 capitalize dark:text-white group-hover:text-white">Natasha Romanoff</h1>
+                        <h1 className="mt-4 text-2xl font-semibold text-gray-700 capitalize dark:text-black group-hover:text-white">Natasha Romanoff</h1>
                         
-                        <p className="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">Lead designer</p>
+                        <p className="mt-2 text-gray-500 capitalize dark:text-black group-hover:text-gray-300">Lead designer</p>
                         
                         <div className="flex mt-3 -mx-2">
                             <p href="#" className="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white" aria-label="Reddit">
@@ -130,12 +130,12 @@ const Teams = () => {
                         </div>
                     </div>
 
-                    <div className="flex flex-col items-center p-8 transition-colors duration-200 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-blue-600 dark:border-gray-700 dark:hover:border-transparent">
+                    <div className="flex flex-col items-center p-8 transition-colors duration-200 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-violet-600 dark:border-gray-700 dark:hover:border-transparent">
                         <img className="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300" src={thor} alt=""/>
                         
-                        <h1 className="mt-4 text-2xl font-semibold text-gray-700 capitalize dark:text-white group-hover:text-white">Thor</h1>
+                        <h1 className="mt-4 text-2xl font-semibold text-gray-700 capitalize dark:text-violet-700 group-hover:text-white">Thor</h1>
                         
-                        <p className="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">Manufacturer</p>
+                        <p className="mt-2 text-gray-500 capitalize dark:text-black group-hover:text-gray-300">Manufacturer</p>
                         
                         <div className="flex mt-3 -mx-2">
                             <p href="#" className="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white" aria-label="Reddit">
