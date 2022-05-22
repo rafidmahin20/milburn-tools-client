@@ -6,7 +6,7 @@ const Header = () => {
     <header className="text-white body-font bg-white shadow dark:bg-gray-500">
       <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
         <h1 className="flex title-font font-medium items-center text-white mb-4 md:mb-0">
-          <span className="ml-3 text-xl uppercase">Doctors Portal</span>
+          <span className="ml-3 text-xl uppercase">Milburn Tools</span>
         </h1>
         <nav className="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
           <Link
