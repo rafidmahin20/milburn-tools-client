@@ -4,7 +4,8 @@ import me from "../../Images/me.png";
 
 const MyPortfolio = () => {
   return (
-    <section class="bg-white  mt-20 mb-10">
+    <main>
+        <section class="bg-white  mt-20 mb-10">
       <Helmet>
         <title>My Portfolio - Milburn Tools</title>
       </Helmet>
@@ -80,6 +81,7 @@ const MyPortfolio = () => {
         </div>
       </div>
     </section>
+    </main>
   );
 };
 
