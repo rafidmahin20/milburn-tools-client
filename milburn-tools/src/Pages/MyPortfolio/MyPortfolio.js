@@ -19,7 +19,7 @@ const MyPortfolio = () => {
               <p class="mt-4 text-gray-500 dark:text-gray-600 lg:max-w-md">
                 Hi I am Rafid, Front-End Developer{" "}
                 <p class="font-bold text-blue-600 dark:text-blue-400" href="#">
-                  @rafidmahin
+                  rafidmahin20@gmail.com
                 </p>{" "}
                 , An enthusiastic undergraduate eager to contribute to team
                 success through excellent organizational skills, time management
