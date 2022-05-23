@@ -18,6 +18,9 @@ const Login = () => {
     const navigateToSignUp = () =>{
         navigate('/signup')
     }
+    if(guser)(
+        navigate('/')
+    )
     const handleLogin = async event =>{
         event.preventDefault();
         const email = emailRef.current.value;
@@ -71,6 +74,7 @@ const Login = () => {
 
         <div className="flex items-center mt-6 -mx-2 mb-5 p-5">
             <button type="button"
+                onClick={() => signInWithGoogle()}
                 className="flex items-center justify-center w-full px-6 py-2 mx-2 text-sm font-medium text-white transition-colors duration-200 transform bg-blue-500 rounded-md hover:bg-blue-400 focus:bg-blue-400 focus:outline-none">
                 <svg className="w-4 h-4 mx-2 fill-current" viewBox="0 0 24 24">
                     <path
