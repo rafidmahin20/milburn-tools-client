@@ -17,7 +17,7 @@ const SignUp = () => {
     navigate("/login");
   };
 
-  if (loading) {
+  if (loading || gloading) {
     return <Loading></Loading>;
   }
   if (guser) {
