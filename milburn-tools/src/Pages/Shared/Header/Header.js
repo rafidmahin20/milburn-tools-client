@@ -45,9 +45,11 @@ const Header = () => {
             My Portfolio
           </Link>
         </nav>
+        <Link to='/login'>
         <button className=" inline-flex items-center btn btn-secondary border-0 py-1 px-3 focus:outline-none hover:btn-accent rounded text-base mt-4 md:mt-0">
           Login
         </button>
+        </Link>
       </div>
     </header>
   );
