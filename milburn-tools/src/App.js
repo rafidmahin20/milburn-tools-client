@@ -7,6 +7,7 @@ import MyPortfolio from './Pages/MyPortfolio/MyPortfolio';
 import Footer from './Pages/Shared/Footer/Footer';
 import Header from './Pages/Shared/Header/Header';
 import NotFound from './Pages/Shared/NotFound/NotFound';
+import SignUp from './Pages/SignUp/SignUp';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
        <Route path='/about' element={<About/>}/>
        <Route path='/portfolio' element={<MyPortfolio/>}/>
        <Route path='/login' element={<Login/>}/>
+       <Route path='/signup' element={<SignUp/>}/>
        <Route path='*' element={<NotFound/>}/>
      </Routes>
      <Footer></Footer>

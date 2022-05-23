@@ -1,7 +1,12 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
+    const navigate = useNavigate()
+    const navigateToSignUp = () =>{
+        navigate('/signup')
+    }
   return (
     <section>
       <Helmet>
@@ -34,9 +39,9 @@ const Login = () => {
         </div>
 
         <div className="flex items-center justify-center py-4 text-center bg-gray-50 ">
-            <span className="text-sm text-gray-600 dark:text-gray-500">Don't have an account? </span>
+            <p className="text-sm text-gray-600 dark:text-gray-500">Don't have an account? </p>
 
-            <p className="mx-2 text-sm font-bold text-blue-500 dark:text-blue-400 hover:underline">Register</p>
+            <span onClick={navigateToSignUp} className="mx-2 text-sm font-bold text-blue-500 dark:text-blue-400 hover:underline">Register</span>
         </div>
         <div className="flex items-center justify-between mt-4">
             <span className="w-1/5 border-b dark:border-gray-600 lg:w-1/5"></span>
