@@ -1,0 +1,90 @@
+[
+    {
+      "picture": "https://i.ibb.co/p3Cgjjm/pic5.png",
+      "min_order": 12,
+      "available_quantity": 30,
+      "price": 203,
+      "name": "Spec Ops hammer",
+      "short_description": "SPEC-M22CF framing hammer"
+    },
+    {
+        "picture": "https://i.ibb.co/p3Cgjjm/pic5.png",
+        "min_order": 12,
+        "available_quantity": 30,
+        "price": 203,
+        "name": "Workpro hammer",
+        "short_description": "w04109A claw hammer"
+      },
+      {
+        "picture": "https://i.ibb.co/p3Cgjjm/pic5.png",
+        "min_order": 15,
+        "available_quantity": 25,
+        "price": 180,
+        "name": "IRWIN hammer",
+        "short_description": "fiberglass, general purpose"
+      },
+      {
+        "picture": "https://i.ibb.co/p3Cgjjm/pic5.png",
+        "min_order": 10,
+        "available_quantity": 30,
+        "price": 173,
+        "name": "CRAFTSMAN hammer",
+        "short_description": "fiberglass 16oz hammer"
+      },
+      {
+        "picture": "https://i.ibb.co/p3Cgjjm/pic5.png",
+        "min_order": 16,
+        "available_quantity": 40,
+        "price": 200,
+        "name": "Estwing hammer",
+        "short_description": "MRF2LB sure strike 3lb fiberglass"
+      },
+      {
+        "picture": "https://i.ibb.co/p3Cgjjm/pic5.png",
+        "min_order": 12,
+        "available_quantity": 30,
+        "price": 203,
+        "name": "STEELhead hammer",
+        "short_description": "5-piece fiberglass handle hammer"
+      },
+      {
+        "picture": "https://i.ibb.co/p3Cgjjm/pic5.png",
+        "min_order": 15,
+        "available_quantity": 50,
+        "price": 150,
+        "name": "Amazon Basic Hammer",
+        "short_description": "5-piece shock-absorbing fiberglass"
+      },
+      {
+        "picture": "https://i.ibb.co/p3Cgjjm/pic5.png",
+        "min_order": 12,
+        "available_quantity": 30,
+        "price": 203,
+        "name": "Titan hammer",
+        "short_description": "general use hammer"
+      },
+      {
+        "picture": "https://i.ibb.co/p3Cgjjm/pic5.png",
+        "min_order": 10,
+        "available_quantity": 20,
+        "price": 103,
+        "name": "ABN hammer",
+        "short_description": "5-piece hammer forging hammer"
+      },
+      {
+        "picture": "https://i.ibb.co/p3Cgjjm/pic5.png",
+        "min_order": 12,
+        "available_quantity": 30,
+        "price": 203,
+        "name": "Real Steel hammer",
+        "short_description": "Rubber grip forged jacketed graphite drilling sledge hammer"
+      },
+      {
+        "picture": "https://i.ibb.co/p3Cgjjm/pic5.png",
+        "min_order": 20,
+        "available_quantity": 30,
+        "price": 300,
+        "name": "Fiskars hammer",
+        "short_description": "Isocare 22 oz miled-faced framing hammer"
+      }
+  ]
