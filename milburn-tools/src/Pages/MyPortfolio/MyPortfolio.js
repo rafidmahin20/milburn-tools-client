@@ -134,74 +134,24 @@ const MyPortfolio = () => {
           </li>
         </ol>
       </section>
+
       <section className="p-10">
-        <h1 className="text-2xl font-bold text-center mb-10 uppercase">
+      <h1 className="text-2xl font-bold text-center mb-10 uppercase">
           Skills
         </h1>
-        <ol className="border-l md:border-l-0 md:border-t border-gray-300 md:flex md:justify-center md:gap-6">
-          <li>
-            <div className="flex md:block flex-start items-center pt-2 md:pt-0">
-              <div className="bg-gray-300 w-2 h-2 rounded-full -ml-1 md:ml-0 mr-3 md:mr-0 md:-mt-1"></div>
-            </div>
-            <div className="mt-0.5 ml-4 md:ml-0 pb-5">
-              <h4 className="text-gray-800 font-semibold text-xl mb-1.5">
-                HTML
-              </h4>
-              <p className="text-gray-500 mb-3">
-                I have the basic knowledge of html and html5.
-              </p>
-            </div>
-          </li>
-          <li>
-            <div className="flex md:block flex-start items-center pt-2 md:pt-0">
-              <div className="bg-gray-300 w-2 h-2 rounded-full -ml-1 md:ml-0 mr-3 md:mr-0 md:-mt-1"></div>
-            </div>
-            <div className="mt-0.5 ml-4 md:ml-0 pb-5">
-              <h4 className="text-gray-800 font-semibold text-xl mb-1.5">
-                CSS
-              </h4>
-              <p className="text-gray-500 mb-3">
-                I have the basic knowledge of css. And also have the knowledge
-                of tailwind and bootstrap css framework. But i prefer tailwind.
-                I like to work with tailwind framework very very much.
-              </p>
-            </div>
-          </li>
-          <li>
-            <div className="flex md:block flex-start items-center pt-2 md:pt-0">
-              <div className="bg-gray-300 w-2 h-2 rounded-full -ml-1 md:ml-0 mr-3 md:mr-0 md:-mt-1"></div>
-            </div>
-            <div className="mt-0.5 ml-4 md:ml-0 pb-5">
-              <h4 className="text-gray-800 font-semibold text-xl mb-1.5">
-                Javascript
-              </h4>
-              <p className="text-gray-500 mb-3">
-                I have the basic knowledge of js language. I solved many
-                prolblems using js and also made websites using js. I use react
-                as js library. i have the basic knowledge of react library.
-              </p>
-            </div>
-          </li>
-        </ol>
+      <div className="w-full bg-gray-200 h-1 mb-6">
+        <h3 className="font-bold">HTML</h3>
+          <div className="bg-blue-600 h-1" style={{width: "90%"}}></div>
+        </div>
+        <div className="w-full bg-gray-200 h-1 mb-6">
+        <h3 className="font-bold">CSS</h3>
+          <div className="bg-blue-600 h-1" style={{width: "75%"}}></div>
+        </div>
+        <div className="w-full bg-gray-200 h-1 mb-6">
+        <h3 className="font-bold">Javascript</h3>
+          <div className="bg-blue-600 h-1"style={{width: "60%"}}></div>
+        </div>
       </section>
-
-      {/* <section>
-        <div className="w-full bg-gray-200 h-1 mb-6">
-          <div className="bg-blue-600 h-1" style="width: 0%"></div>
-        </div>
-        <div className="w-full bg-gray-200 h-1 mb-6">
-          <div className="bg-blue-600 h-1" style="width: 25%"></div>
-        </div>
-        <div className="w-full bg-gray-200 h-1 mb-6">
-          <div className="bg-blue-600 h-1" style="width: 50%"></div>
-        </div>
-        <div className="w-full bg-gray-200 h-1 mb-6">
-          <div className="bg-blue-600 h-1" style="width: 75%"></div>
-        </div>
-        <div className="w-full bg-gray-200 h-1">
-          <div className="bg-blue-600 h-1" style="width: 100%"></div>
-        </div>
-      </section> */}
     </main>
   );
 };
