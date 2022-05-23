@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet-async";
 import { useNavigate } from "react-router-dom";
 import auth from "../Firebase.init";
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import Loading from "../Shared/Loading/Loading";
 
 
 const SignUp = () => {
@@ -17,6 +18,9 @@ const SignUp = () => {
         navigate('/login')
     }
 
+    if(loading){
+        return <Loading></Loading>
+    }
     const handleSignUp = async event =>{
         event.preventDefault();
         const name = event.target.name.value;
