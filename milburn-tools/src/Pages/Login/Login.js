@@ -1,11 +1,29 @@
-import React from "react";
+import React, { useRef } from "react";
+import { useSignInWithEmailAndPassword, useSignInWithGoogle } from "react-firebase-hooks/auth";
 import { Helmet } from "react-helmet-async";
 import { useNavigate } from "react-router-dom";
+import auth from "../Firebase.init";
 
 const Login = () => {
     const navigate = useNavigate()
+    const emailRef = useRef('');
+    const passRef = useRef('');
+    const [signInWithGoogle, guser, gloading, gerror] = useSignInWithGoogle(auth);
+    const [
+        signInWithEmailAndPassword,
+        user,
+        loading,
+        error,
+      ] = useSignInWithEmailAndPassword(auth);
     const navigateToSignUp = () =>{
         navigate('/signup')
+    }
+    const handleLogin = async event =>{
+        event.preventDefault();
+        const email = emailRef.current.value;
+        const password = passRef.current.value;
+        await signInWithEmailAndPassword(email, password)
+        navigate('/')
     }
   return (
     <section>
@@ -21,19 +39,19 @@ const Login = () => {
 
             <p className="mt-1 text-center text-gray-500 dark:text-gray-400">Login or create account</p>
 
-            <form>
+            <form onSubmit={handleLogin}>
                 <div className="w-full mt-4">
-                    <input className="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-500 bg-white border rounded-md  dark:border-gray-600 dark:placeholder-gray-400 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring focus:ring-blue-300" type="email" placeholder="Email Address" aria-label="Email Address" />
+                    <input className="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-500 bg-white border rounded-md  dark:border-gray-600 dark:placeholder-gray-400 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring focus:ring-blue-300" type="email" placeholder="Email Address" aria-label="Email Address" ref={emailRef}/>
                 </div>
 
                 <div className="w-full mt-4">
-                    <input className="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-500 bg-white border rounded-md  dark:border-gray-600 dark:placeholder-gray-400 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring focus:ring-blue-300" type="password" placeholder="Password" aria-label="Password" />
+                    <input className="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-500 bg-white border rounded-md  dark:border-gray-600 dark:placeholder-gray-400 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring focus:ring-blue-300" type="password" placeholder="Password" aria-label="Password" ref={passRef}/>
                 </div>
 
                 <div className="flex items-center justify-between mt-4">
                     <p className="text-sm text-gray-600 dark:text-gray-500 hover:text-gray-500">Forget Password?</p>
 
-                    <button className="px-4 py-2 leading-5 text-white transition-colors duration-200 transform bg-gray-700 rounded hover:bg-gray-600 focus:outline-none" type="button">Login</button>
+                    <button className="px-4 py-2 leading-5 text-white transition-colors duration-200 transform bg-gray-700 rounded hover:bg-gray-600 focus:outline-none" type="submit">Login</button>
                 </div>
             </form>
         </div>
