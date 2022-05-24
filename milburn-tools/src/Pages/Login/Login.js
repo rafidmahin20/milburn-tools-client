@@ -31,7 +31,7 @@ const Login = () => {
         const email = emailRef.current.value;
         const password = passRef.current.value;
         await signInWithEmailAndPassword(email, password)
-        navigate('/')
+        navigate(from, {replace: true});
     }
   return (
     <section>
