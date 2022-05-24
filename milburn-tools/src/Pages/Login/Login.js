@@ -1,13 +1,15 @@
 import React, { useRef } from "react";
 import { useSignInWithEmailAndPassword, useSignInWithGoogle } from "react-firebase-hooks/auth";
 import { Helmet } from "react-helmet-async";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import auth from "../Firebase.init";
 
 const Login = () => {
     const navigate = useNavigate()
     const emailRef = useRef('');
     const passRef = useRef('');
+    const location = useLocation()
+    const from = location.state?.from?.pathname || '/';
     const [signInWithGoogle, guser, gloading, gerror] = useSignInWithGoogle(auth);
     const [
         signInWithEmailAndPassword,
@@ -17,6 +19,9 @@ const Login = () => {
       ] = useSignInWithEmailAndPassword(auth);
     const navigateToSignUp = () =>{
         navigate('/signup')
+    }
+    if(user){
+        navigate(from, {replace: true});
     }
     if(guser)(
         navigate('/')

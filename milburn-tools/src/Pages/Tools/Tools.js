@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Tools = ({ tool }) => {
   const {
@@ -10,6 +11,7 @@ const Tools = ({ tool }) => {
     available_quantity,
     short_description,
   } = tool;
+  const navigateToToolId = (`/tool/tooldetails/${_id}`);
   return (
    <section className="mb-10 px-12">
         <div className="max-w-xs mx-auto overflow-hidden bg-white dark:bg-red-500 rounded-lg shadow-lg">
@@ -36,9 +38,11 @@ const Tools = ({ tool }) => {
 
       <div className="flex items-center justify-between px-4 py-2 bg-gray-900">
         <h1 className="text-lg font-bold text-white">{price}</h1>
+        <Link to={navigateToToolId}>
         <button className="px-2 py-1 text-xs font-semibold text-gray-900 uppercase transition-colors duration-200 transform bg-white rounded hover:bg-gray-200 focus:bg-gray-400 focus:outline-none">
           Add to cart
         </button>
+        </Link>
       </div>
     </div>
    </section>
