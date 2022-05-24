@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import ToolHomePage from '../Tools/ToolHomePage';
 import Banner from './Banner';
 import BusinessSummary from './BusinessSummary';
 import End from './End';
@@ -12,6 +13,7 @@ const Home = () => {
                 <title>Home - Milburn Tools</title>
             </Helmet>
             <Banner></Banner>
+            <ToolHomePage></ToolHomePage>
             <Teams></Teams>
             <BusinessSummary></BusinessSummary>
             <End></End>
