@@ -67,7 +67,12 @@ const ToolDetailsPage = () => {
                 </div>
                 <div className="flex ml-6 items-center">
                   <span className="mr-3">Available Quantity: {toolDetails.available_quantity}</span>
-                  
+                </div>
+              </div>
+              <div className='mb-6'>
+              <div className="w-full mt-4">
+                    <input className="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-500 bg-white border rounded-md  dark:border-gray-600 dark:placeholder-gray-400 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring focus:ring-blue-300" type="number" placeholder="your phone number" aria-label="address" required/>
+                    <textarea className="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-500 bg-white border rounded-md  dark:border-gray-600 dark:placeholder-gray-400 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring focus:ring-blue-300" type="text" placeholder="your address" aria-label="address" required/>
                 </div>
               </div>
               <div className="flex">
