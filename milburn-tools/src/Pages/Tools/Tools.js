@@ -1,14 +1,14 @@
 import React from 'react';
 
-const Tools = () => {
+const Tools = ({tool}) => {
     const {_id, name, picture, price, min_order, available_quantity, short_description} = tool;
     return (
         
     <div className="max-w-xs mx-auto overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800">
     <div className="px-4 py-2">
         <h1 className="text-3xl font-bold text-gray-800 uppercase dark:text-white">{name}</h1>
-        <h3 className="text-3xl font-bold text-gray-800 uppercase dark:text-white">Minimum Order: {min_order}</h3>
-        <h3 className="text-3xl font-bold text-gray-800 uppercase dark:text-white">Available Quantity: {available_quantity}</h3>
+        <h3 className="text-3xl font-bold text-gray-800  dark:text-white">Minimum Order: {min_order}</h3>
+        <h3 className="text-3xl font-bold text-gray-800  dark:text-white">Available Quantity: {available_quantity}</h3>
         <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">{short_description}</p>
     </div>
 
