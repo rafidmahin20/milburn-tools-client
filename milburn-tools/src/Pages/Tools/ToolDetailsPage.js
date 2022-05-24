@@ -60,12 +60,12 @@ const ToolDetailsPage = () => {
                 </span>
               </div>
               <p className="leading-relaxed">Details: {toolDetails.short_description}</p>
-              <div className="flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5">
+              <div className="flex mt-6  pb-5 border-b-2 border-gray-100 mb-5">
                 <div className="flex">
                   <span className="mr-3">Minimum Order: {toolDetails.min_order}</span>
                   <button className="border-2 border-gray-300 btn-primary p-2">Update</button>
                 </div>
-                <div className="flex ml-6 items-center">
+                <div className="flex ml-6">
                   <span className="mr-3">Available Quantity: {toolDetails.available_quantity}</span>
                 </div>
               </div>
