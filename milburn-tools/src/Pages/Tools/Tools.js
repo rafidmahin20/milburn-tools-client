@@ -11,7 +11,7 @@ const Tools = ({ tool }) => {
     available_quantity,
     short_description,
   } = tool;
-  const navigateToToolId = (`/tool/tooldetails/${_id}`);
+  const navigateToToolId = (`/tool/toolDetails/${_id}`);
   return (
    <section className="mb-10 px-12">
         <div className="max-w-xs mx-auto overflow-hidden bg-white dark:bg-red-500 rounded-lg shadow-lg">
