@@ -8,6 +8,7 @@ import Footer from './Pages/Shared/Footer/Footer';
 import Header from './Pages/Shared/Header/Header';
 import NotFound from './Pages/Shared/NotFound/NotFound';
 import SignUp from './Pages/SignUp/SignUp';
+import ToolsPage from './Pages/Tools/ToolsPage';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
        <Route path='/' element={<Home/>}/>
        <Route path='/about' element={<About/>}/>
        <Route path='/portfolio' element={<MyPortfolio/>}/>
+       <Route path='/tools' element={<ToolsPage/>}/>
        <Route path='/login' element={<Login/>}/>
        <Route path='/signup' element={<SignUp/>}/>
        <Route path='*' element={<NotFound/>}/>
