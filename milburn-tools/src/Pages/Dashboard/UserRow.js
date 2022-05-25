@@ -11,10 +11,10 @@ const UserRow = ({user}) => {
         {email}
       </td>
       <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-        Otto
+      <button className="btn btn-xs">Make Admin</button>
       </td>
       <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-        @mdo
+      <button className="btn btn-xs">Remove User</button>
       </td>
     </tr>
   );

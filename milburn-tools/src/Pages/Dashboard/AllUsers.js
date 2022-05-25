@@ -23,10 +23,10 @@ const AllUsers = () => {
                      Email
                     </th>
                     <th scope="col" className="text-sm font-medium text-gray-900 px-6 py-4 text-left">
-                      Last
+                      Admin Access
                     </th>
                     <th scope="col" className="text-sm font-medium text-gray-900 px-6 py-4 text-left">
-                      Handle
+                      Action
                     </th>
                   </tr>
                 </thead>
