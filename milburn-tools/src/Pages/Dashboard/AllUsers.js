@@ -4,7 +4,12 @@ import Loading from '../Shared/Loading/Loading';
 import UserRow from './UserRow';
 
 const AllUsers = () => {
-    const {data: users, isLoading} = useQuery('users', () => fetch('https://ancient-falls-05343.herokuapp.com/user').then(res => res.json()))
+    const {data: users, isLoading, refetch} = useQuery('users', () => fetch('https://ancient-falls-05343.herokuapp.com/user', {
+        method: 'GET',
+        headers:{
+            authorization: `Bearer ${localStorage.getItem('accessToken')}`
+        }
+    }).then(res => res.json()))
     if(isLoading){
         return<Loading></Loading>
     }
@@ -35,6 +40,7 @@ const AllUsers = () => {
                       users.map(user =><UserRow
                       key={user._id}
                       user={user}
+                      refetch={refetch}
                       ></UserRow>)
                   }
                 </tbody>
