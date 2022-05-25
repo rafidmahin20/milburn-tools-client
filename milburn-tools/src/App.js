@@ -1,6 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import About from './Pages/About/About';
+import Dashboard from './Pages/Dashboard/Dashboard';
 import Home from './Pages/Home/Home';
 import Login from './Pages/Login/Login';
 import MyPortfolio from './Pages/MyPortfolio/MyPortfolio';
@@ -24,6 +25,11 @@ function App() {
        <Route path='/tool/toolDetails/:toolId' element={
          <RequireAuth>
            <ToolDetailsPage/>
+         </RequireAuth>
+       }/>
+       <Route path='/dashboard' element={
+         <RequireAuth>
+           <Dashboard/>
          </RequireAuth>
        }/>
        <Route path='/login' element={<Login/>}/>
