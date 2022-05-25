@@ -1,6 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import About from './Pages/About/About';
+import AddProduct from './Pages/Dashboard/AddProduct';
 import AddReview from './Pages/Dashboard/AddReview';
 import AllUsers from './Pages/Dashboard/AllUsers';
 import Dashboard from './Pages/Dashboard/Dashboard';
@@ -43,6 +44,11 @@ function App() {
          <Route path='allUsers' element={
            <RequireAdmin>
              <AllUsers></AllUsers>
+           </RequireAdmin>
+         }></Route>
+         <Route path='addproduct' element={
+           <RequireAdmin>
+             <AddProduct></AddProduct>
            </RequireAdmin>
          }></Route>
        </Route>
