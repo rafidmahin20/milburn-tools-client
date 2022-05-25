@@ -9,12 +9,21 @@ const ToolDetailsPage = () => {
   const { toolId } = useParams();
   const [user] = useAuthState(auth);
   const [toolDetails, setToolDetails] = useState({});
+  const [disabled, setDisabled] = useState(false);
+
   useEffect(() => {
     const url = `http://localhost:5000/tool/${toolId}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setToolDetails(data));
   }, [toolDetails, toolId]);
+
+  // const handleQuantity = () =>{
+  //   let quantity =[];
+  //   if(quantity >= 15 && quantity < 30){
+  //     disabled:true
+  //   }
+  // }
   // const handleOrder = event =>{
   //   event.preventDefault();
   //   setProduct(null);
@@ -188,12 +197,22 @@ const ToolDetailsPage = () => {
                 <span className="title-font font-medium text-2xl text-gray-900">
                   ${toolDetails.price}
                 </span>
-                <button
-                  type="submit"
-                  className="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded"
-                >
-                  Place Order
-                </button>
+               
+               {
+                 disabled ? <button
+                 type="submit"
+                 className="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded" disabled="true"
+               >
+                 Place Order
+               </button>
+               :
+               <button
+               type="submit"
+               className="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded" disabled="false"
+             >
+               Place Order
+             </button>
+               }
                 <button className="rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4">
                   <svg
                     fill="currentColor"

@@ -9,6 +9,7 @@ import {
 } from "react-firebase-hooks/auth";
 import Loading from "../Shared/Loading/Loading";
 import { useForm } from "react-hook-form";
+import useToken from "../Hooks/useToken";
 
 const SignUp = () => {
   const [createUserWithEmailAndPassword, user, loading, error] =
@@ -21,6 +22,7 @@ const SignUp = () => {
     handleSubmit,
   } = useForm();
   const [updateProfile, updating, updateError] = useUpdateProfile(auth);
+  const [token] = useToken(guser || user)
 
   const navigateToLogin = () => {
     navigate("/login");
@@ -40,14 +42,14 @@ const SignUp = () => {
       </p>
     );
   }
-  if (guser) {
-    navigate("/");
+  if (token) {
+     navigate("/login");
   }
 
   const onSubmit = async (data) => {
     await createUserWithEmailAndPassword(data.email, data.password);
     await updateProfile({ displayName: data.name });
-    navigate("/login");
+    
   };
   return (
     <section>
