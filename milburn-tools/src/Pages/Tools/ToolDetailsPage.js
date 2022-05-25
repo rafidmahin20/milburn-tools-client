@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 import auth from "../Firebase.init";
 
 const ToolDetailsPage = () => {
+  // const {name} = product
   const { toolId } = useParams();
   const [user] = useAuthState(auth);
   const [toolDetails, setToolDetails] = useState({});
@@ -14,6 +15,10 @@ const ToolDetailsPage = () => {
       .then((res) => res.json())
       .then((data) => setToolDetails(data));
   }, [toolDetails, toolId]);
+  // const handleOrder = event =>{
+  //   event.preventDefault();
+  //   setProduct(null);
+  // }
   return (
     <section className="text-gray-600 body-font overflow-hidden">
       <Helmet>
