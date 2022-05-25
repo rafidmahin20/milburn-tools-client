@@ -61,17 +61,11 @@ const ToolDetailsPage = () => {
               </div>
               <p className="leading-relaxed">Details: {toolDetails.short_description}</p>
               <div className="flex mt-6  pb-5 border-b-2 border-gray-100 mb-5">
-                <div className="flex">
-                  <span className="mr-3">Minimum Order: {toolDetails.min_order}</span>
-                  <button className="border-2 border-gray-300 btn-primary p-2">Update</button>
-                </div>
-                <div className="flex ml-6">
-                  <span className="mr-3">Available Quantity: {toolDetails.available_quantity}</span>
-                </div>
+              <input className="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-500 bg-white border rounded-md  dark:border-gray-600 dark:placeholder-gray-400 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring focus:ring-blue-300" type="number" placeholder="quantity" aria-label="number" required/>
               </div>
               <div className='mb-6'>
               <div className="w-full mt-4">
-                    <input className="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-500 bg-white border rounded-md  dark:border-gray-600 dark:placeholder-gray-400 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring focus:ring-blue-300" type="number" placeholder="your phone number" aria-label="address" required/>
+                    <input className="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-500 bg-white border rounded-md  dark:border-gray-600 dark:placeholder-gray-400 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring focus:ring-blue-300" type="number" placeholder="your phone number" aria-label="number" required/>
                     <textarea className="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-500 bg-white border rounded-md  dark:border-gray-600 dark:placeholder-gray-400 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring focus:ring-blue-300" type="text" placeholder="your address" aria-label="address" required/>
                 </div>
               </div>

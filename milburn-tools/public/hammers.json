@@ -1,7 +1,7 @@
 [
     {
       "picture": "https://i.ibb.co/6PnPN6H/item1.png",
-      "min_order": 12,
+      "min_order": 15,
       "available_quantity": 30,
       "price": 203,
       "name": "Spec Ops hammer",
@@ -9,7 +9,7 @@
     },
     {
         "picture": "https://i.ibb.co/Bn9P7Xs/item2.png",
-        "min_order": 12,
+        "min_order": 15,
         "available_quantity": 30,
         "price": 203,
         "name": "Workpro hammer",
@@ -18,14 +18,14 @@
       {
         "picture": "https://i.ibb.co/N15rWMc/item3.png",
         "min_order": 15,
-        "available_quantity": 25,
+        "available_quantity": 30,
         "price": 180,
         "name": "IRWIN hammer",
         "short_description": "fiberglass, general purpose"
       },
       {
         "picture": "https://i.ibb.co/yStv0jy/item4.png",
-        "min_order": 10,
+        "min_order": 15,
         "available_quantity": 30,
         "price": 173,
         "name": "CRAFTSMAN hammer",
@@ -33,15 +33,15 @@
       },
       {
         "picture": "https://i.ibb.co/XZBxhCx/item5.png",
-        "min_order": 16,
-        "available_quantity": 40,
+        "min_order": 15,
+        "available_quantity": 30,
         "price": 200,
         "name": "Estwing hammer",
         "short_description": "MRF2LB sure strike 3lb fiberglass"
       },
       {
         "picture": "https://i.ibb.co/fvMvYkR/item6.png",
-        "min_order": 12,
+        "min_order": 15,
         "available_quantity": 30,
         "price": 203,
         "name": "STEELhead hammer",
@@ -50,14 +50,14 @@
       {
         "picture": "https://i.ibb.co/hBkCQ7X/item7.png",
         "min_order": 15,
-        "available_quantity": 50,
+        "available_quantity": 30,
         "price": 150,
         "name": "Amazon Basic Hammer",
         "short_description": "5-piece shock-absorbing fiberglass"
       },
       {
         "picture": "https://i.ibb.co/J2zWCq9/items8.png",
-        "min_order": 12,
+        "min_order": 15,
         "available_quantity": 30,
         "price": 203,
         "name": "Titan hammer",
@@ -65,15 +65,15 @@
       },
       {
         "picture": "https://i.ibb.co/HNPTr5P/items9.png",
-        "min_order": 10,
-        "available_quantity": 20,
+        "min_order": 15,
+        "available_quantity": 30,
         "price": 103,
         "name": "ABN hammer",
         "short_description": "5-piece hammer forging hammer"
       },
       {
         "picture": "https://i.ibb.co/fCKcpq6/items10.png",
-        "min_order": 12,
+        "min_order": 15,
         "available_quantity": 30,
         "price": 203,
         "name": "Real Steel hammer",
@@ -81,7 +81,7 @@
       },
       {
         "picture": "https://i.ibb.co/cc7wkyP/items11.png",
-        "min_order": 20,
+        "min_order": 15,
         "available_quantity": 30,
         "price": 300,
         "name": "Fiskars hammer",
