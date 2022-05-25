@@ -6,6 +6,7 @@ import AddProduct from './Pages/Dashboard/AddProduct';
 import AddReview from './Pages/Dashboard/AddReview';
 import AllUsers from './Pages/Dashboard/AllUsers';
 import Dashboard from './Pages/Dashboard/Dashboard';
+import ManageOrders from './Pages/Dashboard/ManageOrders';
 import ManageProducts from './Pages/Dashboard/ManageProducts';
 import MyOrders from './Pages/Dashboard/MyOrders';
 import MyProfile from './Pages/Dashboard/MyProfile';
@@ -57,6 +58,11 @@ function App() {
          <Route path='manageproduct' element={
            <RequireAdmin>
              <ManageProducts></ManageProducts>
+           </RequireAdmin>
+         }></Route>
+         <Route path='manageorders' element={
+           <RequireAdmin>
+            <ManageOrders></ManageOrders>
            </RequireAdmin>
          }></Route>
        </Route>
