@@ -4,6 +4,7 @@ import ToolHomePage from '../Tools/ToolHomePage';
 import Banner from './Banner';
 import BusinessSummary from './BusinessSummary';
 import End from './End';
+import ReviewHome from './ReviewHome';
 import Teams from './Teams';
 
 const Home = () => {
@@ -16,6 +17,7 @@ const Home = () => {
             <ToolHomePage></ToolHomePage>
             <Teams></Teams>
             <BusinessSummary></BusinessSummary>
+            <ReviewHome></ReviewHome>
             <End></End>
         </div>
     );
