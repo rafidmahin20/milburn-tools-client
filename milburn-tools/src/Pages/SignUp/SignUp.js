@@ -5,30 +5,56 @@ import auth from "../Firebase.init";
 import {
   useCreateUserWithEmailAndPassword,
   useSignInWithGoogle,
+  useUpdateProfile,
 } from "react-firebase-hooks/auth";
 import Loading from "../Shared/Loading/Loading";
+import { useForm } from "react-hook-form";
 
 const SignUp = () => {
   const [createUserWithEmailAndPassword, user, loading, error] =
     useCreateUserWithEmailAndPassword(auth);
   const [signInWithGoogle, guser, gloading, gerror] = useSignInWithGoogle(auth);
   const navigate = useNavigate();
+  const {
+    register,
+    formState: { errors },
+    handleSubmit,
+  } = useForm();
+  const [updateProfile, updating, updateError] = useUpdateProfile(auth);
+
   const navigateToLogin = () => {
     navigate("/login");
   };
 
-  if (loading || gloading) {
+  let signInError;
+
+  if (loading || gloading || updating) {
     return <Loading></Loading>;
+  }
+  if (error || gerror || updateError) {
+    signInError = (
+      <p className="text-red-500">
+        <small>
+          {error?.message || gerror?.message || updateError?.message}
+        </small>
+      </p>
+    );
   }
   if (guser) {
     navigate("/");
   }
-  const handleSignUp = async (event) => {
-    event.preventDefault();
-    const name = event.target.name.value;
-    const email = event.target.email.value;
-    const password = event.target.password.value;
-    await createUserWithEmailAndPassword(email, password);
+  // const handleSignUp = async (event) => {
+  //   event.preventDefault();
+  //   const name = event.target.name.value;
+  //   const email = event.target.email.value;
+  //   const password = event.target.password.value;
+  //   await createUserWithEmailAndPassword(email, password);
+  //   navigate("/login");
+  // };
+
+  const onSubmit = async (data) => {
+    await createUserWithEmailAndPassword(data.email, data.password);
+    await updateProfile({ displayName: data.name });
     navigate("/login");
   };
   return (
@@ -46,35 +72,93 @@ const SignUp = () => {
             create account
           </p>
 
-          <form onSubmit={handleSignUp}>
+          <form onSubmit={handleSubmit(onSubmit)}>
             <div className="w-full mt-4">
               <input
+                {...register("name", {
+                  required: {
+                    value: true,
+                    message: "name is required",
+                  },
+                })}
                 className="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-500 bg-white border rounded-md  dark:border-gray-600 dark:placeholder-gray-400 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring focus:ring-blue-300"
                 type="name"
                 placeholder="Name"
                 aria-label="Name"
                 name="name"
               />
+              <label className="label">
+                {errors.name?.type === "required" && (
+                  <span className="label-text-alt text-red-500">
+                    {errors.name.message}
+                  </span>
+                )}
+              </label>
             </div>
             <div className="w-full mt-4">
               <input
+                {...register("email", {
+                  required: {
+                    value: true,
+                    message: "Email is Required",
+                  },
+                  pattern: {
+                    value: /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/,
+                    message: "Provide a valid Email",
+                  },
+                })}
                 className="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-500 bg-white border rounded-md  dark:border-gray-600 dark:placeholder-gray-400 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring focus:ring-blue-300"
                 type="email"
                 placeholder="Email Address"
                 aria-label="Email Address"
                 name="email"
               />
+              <label className="label">
+                {errors.email?.type === "required" && (
+                  <span className="label-text-alt text-red-500">
+                    {errors.email.message}
+                  </span>
+                )}
+                {errors.email?.type === "pattern" && (
+                  <span className="label-text-alt text-red-500">
+                    {errors.email.message}
+                  </span>
+                )}
+              </label>
             </div>
 
             <div className="w-full mt-4">
               <input
+                {...register("password", {
+                  required: {
+                    value: true,
+                    message: "Password is Required",
+                  },
+                  minLength: {
+                    value: 6,
+                    message: "Must be 6 characters or longer",
+                  },
+                })}
                 className="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-500 bg-white border rounded-md  dark:border-gray-600 dark:placeholder-gray-400 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring focus:ring-blue-300"
                 type="password"
                 placeholder="Password"
                 aria-label="Password"
                 name="password"
               />
+              <label className="label">
+                {errors.password?.type === "required" && (
+                  <span className="label-text-alt text-red-500">
+                    {errors.password.message}
+                  </span>
+                )}
+                {errors.password?.type === "minLength" && (
+                  <span className="label-text-alt text-red-500">
+                    {errors.password.message}
+                  </span>
+                )}
+              </label>
             </div>
+            {signInError}
 
             <div className="flex items-center mt-4 justify-center">
               <button

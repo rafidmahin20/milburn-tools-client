@@ -6,7 +6,7 @@ const AddReview = () => {
     const {handleSubmit, register} = useForm();
     const navigate = useNavigate();
     const onSubmit = data =>{
-        const url = `http://localhost:5000/review`
+        const url = `http://localhost:5000/tool`
         fetch(url, {
             method: 'POST',
             headers: {

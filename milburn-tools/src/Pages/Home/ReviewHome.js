@@ -8,7 +8,7 @@ const ReviewHome = () => {
   const [myReview, setMyreview] = useState([]);
   const [review, setReview] = useReview();
   useEffect(() => {
-    const url = `http://localhost:5000/review?email=${user.email}`;
+    const url = `http://localhost:5000/tool?email=${user.email}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setMyreview(data));
