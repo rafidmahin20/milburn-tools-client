@@ -51,6 +51,16 @@ const Header = () => {
           >
             My Portfolio
           </Link>
+          {
+            user && 
+            <Link
+            to="/dashboard"
+            href="#"
+            class="px-2 py-1 text-sm font-medium text-gray-700 transition-colors duration-200 transform rounded dark:text-gray-200 hover:bg-gray-900 hover:text-gray-100 md:mx-2"
+          >
+            Dashboard
+          </Link>
+          }
         </nav>
         {
           user?
