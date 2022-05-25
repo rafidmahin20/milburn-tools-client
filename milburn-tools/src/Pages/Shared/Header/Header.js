@@ -8,6 +8,7 @@ const Header = () => {
   const [user] = useAuthState(auth);
   const handleLogout = () =>{
     signOut(auth);
+    localStorage.removeItem('accessToken');
 }
   return (
     <header className="text-white body-font bg-white shadow dark:bg-gray-500">
