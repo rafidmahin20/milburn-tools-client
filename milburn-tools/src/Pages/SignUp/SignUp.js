@@ -43,14 +43,6 @@ const SignUp = () => {
   if (guser) {
     navigate("/");
   }
-  // const handleSignUp = async (event) => {
-  //   event.preventDefault();
-  //   const name = event.target.name.value;
-  //   const email = event.target.email.value;
-  //   const password = event.target.password.value;
-  //   await createUserWithEmailAndPassword(email, password);
-  //   navigate("/login");
-  // };
 
   const onSubmit = async (data) => {
     await createUserWithEmailAndPassword(data.email, data.password);
