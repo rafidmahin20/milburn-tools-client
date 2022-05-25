@@ -8,7 +8,7 @@ const ReviewHome = () => {
   const [myReview, setMyreview] = useState([]);
   const [review, setReview] = useReview();
   useEffect(() => {
-    const url = `http://localhost:5000/tool?email=${user.email}`;
+    const url = `https://ancient-falls-05343.herokuapp.com/tool?email=${user.email}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setMyreview(data));

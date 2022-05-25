@@ -12,7 +12,7 @@ const ToolDetailsPage = () => {
   const [disabled, setDisabled] = useState(false);
 
   useEffect(() => {
-    const url = `http://localhost:5000/tool/${toolId}`;
+    const url = `https://ancient-falls-05343.herokuapp.com/tool/${toolId}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setToolDetails(data));

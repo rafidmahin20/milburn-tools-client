@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 const useTool = () => {
     const [tools, setTools] = useState([]);
     useEffect(() =>{
-        fetch('http://localhost:5000/tool')
+        fetch('https://ancient-falls-05343.herokuapp.com/tool')
         .then(res => res.json())
         .then(data => setTools(data))
     }, [tools])
