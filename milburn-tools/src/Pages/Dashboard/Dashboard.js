@@ -1,6 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
-import { Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
 const Dashboard = () => {
   return (
@@ -23,10 +23,10 @@ const Dashboard = () => {
           <label for="my-drawer-2" className="drawer-overlay"></label>
           <ul className="menu p-4 overflow-y-auto w-80 bg-base-100 text-base-content">
             <li>
-              <a>Sidebar Item 1</a>
+              <Link to='/dashboard'>Sidebar Item 1</Link>
             </li>
             <li>
-              <a>Sidebar Item 2</a>
+              <Link to='addreview'>Sidebar Item 2</Link>
             </li>
           </ul>
         </div>
