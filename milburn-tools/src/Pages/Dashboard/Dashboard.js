@@ -38,14 +38,17 @@ const Dashboard = () => {
               <Link to="myprofile">My Profile</Link>
             </li>
             {admin && 
+              <>
               <li>
                 <Link to="allUsers">All Users</Link>
               </li>
-            }
-            {admin && 
               <li>
                 <Link to="addproduct">Add Product</Link>
               </li>
+              <li>
+                <Link to="manageproduct">Manage Product</Link>
+              </li>
+              </>
             }
           </ul>
         </div>

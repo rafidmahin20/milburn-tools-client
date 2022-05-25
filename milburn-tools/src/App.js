@@ -5,6 +5,7 @@ import AddProduct from './Pages/Dashboard/AddProduct';
 import AddReview from './Pages/Dashboard/AddReview';
 import AllUsers from './Pages/Dashboard/AllUsers';
 import Dashboard from './Pages/Dashboard/Dashboard';
+import ManageProducts from './Pages/Dashboard/ManageProducts';
 import MyOrders from './Pages/Dashboard/MyOrders';
 import MyProfile from './Pages/Dashboard/MyProfile';
 import Home from './Pages/Home/Home';
@@ -49,6 +50,11 @@ function App() {
          <Route path='addproduct' element={
            <RequireAdmin>
              <AddProduct></AddProduct>
+           </RequireAdmin>
+         }></Route>
+         <Route path='manageproduct' element={
+           <RequireAdmin>
+             <ManageProducts></ManageProducts>
            </RequireAdmin>
          }></Route>
        </Route>
