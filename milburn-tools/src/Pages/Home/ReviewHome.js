@@ -3,10 +3,11 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../Firebase.init";
 import useReview from "../Hooks/useReview";
 
-const ReviewHome = ({review}) => {
-  const {rating, feedback} = review;
+const ReviewHome = () => {
+  // const {rating, feedback} = review;
   const [user] = useAuthState(auth);
   const [myReview, setMyreview] = useState([]);
+  console.log(myReview)
   // const [review, setReview] = useReview();
   useEffect(() => {
     const url = `https://ancient-falls-05343.herokuapp.com/review`;
@@ -23,18 +24,20 @@ const ReviewHome = ({review}) => {
       <div className="w-full max-w-sm px-4 py-3 mx-auto bg-white rounded-md shadow-md">
         <div className="flex items-center justify-between">
           <span className="px-3 py-1 text-xs text-blue-800 uppercase bg-blue-200 rounded-full dark:bg-blue-300 dark:text-blue-900">
-            review
+            review 
           </span>
         </div>
 
-        <div>
-          <h1 className="mt-2 text-lg font-semibold text-gray-800 dark:text-black">
-            Rating: {rating}
-          </h1>
-          <p className="mt-2 text-sm text-gray-600 dark:text-black">
-            Feedback: {feedback}
-          </p>
-        </div>
+        {
+          myReview.map(review => <div>
+            <h1 className="mt-2 text-lg font-semibold text-gray-800 dark:text-black">
+              Rating: {review?.rating}
+            </h1>
+            <p className="mt-2 text-sm text-gray-600 dark:text-black">
+              Feedback: {review?.feedback}
+            </p>
+          </div>)
+        }
 
         <div>
           <div className="flex items-center justify-center mt-4">

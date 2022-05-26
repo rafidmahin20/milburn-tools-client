@@ -34,22 +34,10 @@ const ManageProducts = () => {
                   Image
                 </th>
                 <th scope="col" className="px-6 py-3">
-                  Name
-                </th>
-                <th scope="col" className="px-6 py-3">
                   Price
                 </th>
                 <th scope="col" className="px-6 py-3">
-                  Quantity
-                </th>
-                <th scope="col" className="px-6 py-3">
-                  Sold
-                </th>
-                <th scope="col" className="px-6 py-3">
                   Details
-                </th>
-                <th scope="col" className="px-6 py-3">
-                  Supplier Name
                 </th>
                 <th scope="col" className="px-6 py-3">
                   Action
@@ -61,21 +49,13 @@ const ManageProducts = () => {
                 <>
                   <tr
                     key={tool._id}
-                    className="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
+                    className="bg-white border-b "
                   >
                       <td className="px-6 py-4 whitespace-nowrap">
                           <img className="h-12 w-12 rounded-full" src={tool.picture} alt=""/>
                       </td>
-                    <td
-                      className="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap"
-                    >
-                      {tool.name}
-                    </td>
                     <td className="px-6 py-4">{tool.price}</td>
-                    <td className="px-6 py-4">{tool.quantity}</td>
-                    <td className="px-6 py-4">{tool.sold}</td>
                     <td className="px-6 py-4">{tool.short_description}</td>
-                    <td className="px-6 py-4">{tool.supplier_name}</td>
                     <td className="px-6 py-4 text-right ">
                       <button onClick={() => handleDelete(tool._id)} className=" bg-red-500 w-8 h-8 rounded">
                         <img
