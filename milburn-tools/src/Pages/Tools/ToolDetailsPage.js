@@ -48,9 +48,9 @@ const ToolDetailsPage = ({tool}) => {
       toast.success('order placed')
     })
   }
-  const navigateToPayment = () =>{
-    navigate('/dashboard/payment/:id');
-  }
+  // const navigateToPayment = () =>{
+  //   navigate('/dashboard/payment/:id');
+  // }
   return (
     <section className="text-gray-600 body-font overflow-hidden">
       <Helmet>
@@ -224,7 +224,6 @@ const ToolDetailsPage = ({tool}) => {
                   ${toolDetails.price}
                 </span>
                <button
-               onClick={navigateToPayment}
                  type="submit"
                  className="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded"
                >

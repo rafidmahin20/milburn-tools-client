@@ -13,7 +13,31 @@ const MyOrders = () => {
         }
     },[user])
     return (
-      <h1>my orders: {orders.length}</h1>
+        <div className="overflow-x-auto">
+        <table className="table w-full">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Quantity</th>
+              <th>Phone</th>
+            </tr>
+          </thead>
+          <tbody>
+              {
+                  orders.map(o => <tr>
+                    <th>1</th>
+                    <td>{o.customerName}</td>
+                    <td>{o.customerEmail}</td>
+                    <td>{o.quantity}</td>
+                    <td>{o.phone}</td>
+                  </tr>)
+              }
+           
+          </tbody>
+        </table>
+      </div>
     );
 };
 
