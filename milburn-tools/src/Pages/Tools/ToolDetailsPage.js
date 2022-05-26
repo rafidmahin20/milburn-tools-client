@@ -2,14 +2,15 @@ import React, { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Helmet } from "react-helmet-async";
 import { useParams } from "react-router-dom";
+import { toast } from "react-toastify";
 import auth from "../Firebase.init";
 
-const ToolDetailsPage = () => {
-  // const {name} = product
+const ToolDetailsPage = ({tool}) => {
+  // const { name} = tool;
   const { toolId } = useParams();
   const [user] = useAuthState(auth);
   const [toolDetails, setToolDetails] = useState({});
-  const [disabled, setDisabled] = useState(false);
+  // const [disabled, setDisabled] = useState(false);
 
   useEffect(() => {
     const url = `https://ancient-falls-05343.herokuapp.com/tool/${toolId}`;
@@ -21,20 +22,38 @@ const ToolDetailsPage = () => {
   // const handleQuantity = () =>{
   //   let quantity =[];
   //   if(quantity >= 15 && quantity < 30){
-  //     disabled:true
+  //     console.log(disabled="{true}")
   //   }
   // }
-  // const handleOrder = event =>{
-  //   event.preventDefault();
-  //   setProduct(null);
-  // }
+  const handleOrder = event =>{
+    event.preventDefault();
+    const order = {
+      // tool: name,
+      customerName: user.displayName,
+      customerEmail: user.email,
+      phone: event.target.phone.value,
+      quantity: event.target.quantity.value
+    }
+
+    fetch('https://ancient-falls-05343.herokuapp.com/order', {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json'
+      },
+      body: JSON.stringify(order)
+    })
+    .then(res => res.json())
+    .then(data => {
+      toast.success('order placed')
+    })
+  }
   return (
     <section className="text-gray-600 body-font overflow-hidden">
       <Helmet>
         <title>Details - Milburn Tools</title>
       </Helmet>
       <div className="container px-5 py-24 mx-auto">
-        <form>
+        <form onSubmit={handleOrder}>
           <div className="lg:w-4/5 mx-auto flex flex-wrap">
             <img
               alt="ecommerce"
@@ -151,6 +170,7 @@ const ToolDetailsPage = () => {
               </p>
               <div className="flex mt-6  pb-5 border-b-2 border-gray-100 mb-5">
                 <input
+                  name="quantity"
                   className="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-500 bg-white border rounded-md  dark:border-gray-600 dark:placeholder-gray-400 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring focus:ring-blue-300"
                   type="number"
                   placeholder="quantity"
@@ -178,6 +198,7 @@ const ToolDetailsPage = () => {
                     aria-label="Email Address"
                   />
                   <input
+                    name="phone"
                     className="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-500 bg-white border rounded-md  dark:border-gray-600 dark:placeholder-gray-400 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring focus:ring-blue-300"
                     type="number"
                     placeholder="your phone number"
@@ -185,6 +206,7 @@ const ToolDetailsPage = () => {
                     required
                   />
                   <textarea
+                    name="address"
                     className="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-500 bg-white border rounded-md  dark:border-gray-600 dark:placeholder-gray-400 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring focus:ring-blue-300"
                     type="text"
                     placeholder="your address"
@@ -197,22 +219,12 @@ const ToolDetailsPage = () => {
                 <span className="title-font font-medium text-2xl text-gray-900">
                   ${toolDetails.price}
                 </span>
-               
-               {
-                 disabled ? <button
+               <button
                  type="submit"
-                 className="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded" disabled="true"
+                 className="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded"
                >
                  Place Order
                </button>
-               :
-               <button
-               type="submit"
-               className="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded" disabled="false"
-             >
-               Place Order
-             </button>
-               }
                 <button className="rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4">
                   <svg
                     fill="currentColor"

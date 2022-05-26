@@ -6,7 +6,7 @@ const AddReview = () => {
     const {handleSubmit, register} = useForm();
     const navigate = useNavigate();
     const onSubmit = data =>{
-        const url = `https://ancient-falls-05343.herokuapp.com/tool`
+        const url = `https://ancient-falls-05343.herokuapp.com/review`
         fetch(url, {
             method: 'POST',
             headers: {

@@ -8,7 +8,7 @@ const ReviewHome = () => {
   const [myReview, setMyreview] = useState([]);
   const [review, setReview] = useReview();
   useEffect(() => {
-    const url = `https://ancient-falls-05343.herokuapp.com/tool?email=${user.email}`;
+    const url = `https://ancient-falls-05343.herokuapp.com/review`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setMyreview(data));
@@ -28,10 +28,10 @@ const ReviewHome = () => {
 
         <div>
           <h1 className="mt-2 text-lg font-semibold text-gray-800 dark:text-black">
-            Rating: {myReview.rating}
+            Rating: {review.rating}
           </h1>
           <p className="mt-2 text-sm text-gray-600 dark:text-black">
-            Feedback: {myReview.revew}
+            Feedback: {review.revew}
           </p>
         </div>
 
