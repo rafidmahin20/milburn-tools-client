@@ -1,10 +1,11 @@
 import React from 'react';
+import { useQuery } from 'react-query';
+import Loading from '../Shared/Loading/Loading';
 
 const ManageOrders = () => {
+    
     return (
-        <div>
-            <h1>manage orders</h1>
-        </div>
+        <h1>hello there</h1>
     );
 };
 

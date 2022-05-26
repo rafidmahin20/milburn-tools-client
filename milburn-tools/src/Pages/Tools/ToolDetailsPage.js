@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Helmet } from "react-helmet-async";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 import auth from "../Firebase.init";
 
@@ -10,6 +10,7 @@ const ToolDetailsPage = ({tool}) => {
   const { toolId } = useParams();
   const [user] = useAuthState(auth);
   const [toolDetails, setToolDetails] = useState({});
+  const navigate = useNavigate()
   // const [disabled, setDisabled] = useState(false);
 
   useEffect(() => {
@@ -46,6 +47,9 @@ const ToolDetailsPage = ({tool}) => {
     .then(data => {
       toast.success('order placed')
     })
+  }
+  const navigateToPayment = () =>{
+    navigate('/dashboard/payment/:id');
   }
   return (
     <section className="text-gray-600 body-font overflow-hidden">
@@ -220,6 +224,7 @@ const ToolDetailsPage = ({tool}) => {
                   ${toolDetails.price}
                 </span>
                <button
+               onClick={navigateToPayment}
                  type="submit"
                  className="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded"
                >

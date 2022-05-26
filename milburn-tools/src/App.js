@@ -22,6 +22,7 @@ import SignUp from './Pages/SignUp/SignUp';
 import ToolDetailsPage from './Pages/Tools/ToolDetailsPage';
 import ToolsPage from './Pages/Tools/ToolsPage';
 import { ToastContainer } from 'react-toastify';
+import Payment from './Pages/Dashboard/Payment';
 
 function App() {
   return (
@@ -46,6 +47,7 @@ function App() {
          <Route index element={<MyOrders></MyOrders>}></Route>
          <Route path='addreview' element={<AddReview></AddReview>}></Route>
          <Route path='myprofile' element={<MyProfile></MyProfile>}></Route>
+         <Route path='payment/:id' element={<Payment></Payment>}></Route>
          <Route path='allUsers' element={
            <RequireAdmin>
              <AllUsers></AllUsers>
