@@ -7,7 +7,6 @@ const ReviewHome = () => {
   // const {rating, feedback} = review;
   const [user] = useAuthState(auth);
   const [myReview, setMyreview] = useState([]);
-  console.log(myReview)
   // const [review, setReview] = useReview();
   useEffect(() => {
     const url = `https://ancient-falls-05343.herokuapp.com/review`;
