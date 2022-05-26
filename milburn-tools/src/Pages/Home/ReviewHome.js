@@ -3,10 +3,11 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../Firebase.init";
 import useReview from "../Hooks/useReview";
 
-const ReviewHome = () => {
+const ReviewHome = ({review}) => {
+  const {rating, feedback} = review;
   const [user] = useAuthState(auth);
   const [myReview, setMyreview] = useState([]);
-  const [review, setReview] = useReview();
+  // const [review, setReview] = useReview();
   useEffect(() => {
     const url = `https://ancient-falls-05343.herokuapp.com/review`;
     fetch(url)
@@ -28,10 +29,10 @@ const ReviewHome = () => {
 
         <div>
           <h1 className="mt-2 text-lg font-semibold text-gray-800 dark:text-black">
-            Rating: {review.rating}
+            Rating: {rating}
           </h1>
           <p className="mt-2 text-sm text-gray-600 dark:text-black">
-            Feedback: {review.revew}
+            Feedback: {feedback}
           </p>
         </div>
 

@@ -92,6 +92,8 @@ const MyProfile = () => {
               </label>
 
               <input
+                name="name"
+                {...register("name")}
                 value={user?.displayName || ""}
                 className="block w-full px-4 py-2 text-gray-700 bg-white border rounded-md  dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40"
                 type="text"
@@ -104,10 +106,11 @@ const MyProfile = () => {
               </label>
 
               <input
+                name="email"
+                {...register("email")}
                 value={user?.email || ""}
                 className="block w-full px-4 py-2 text-gray-700 bg-white border rounded-md  dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40"
                 type="email"
-                disabled
               />
             </div>
             <div className="w-full mx-2 mt-4 md:mt-0">
@@ -129,17 +132,22 @@ const MyProfile = () => {
               Address
             </label>
 
-            <textarea 
-            name="address"
-            {...register("address")}
-            className="block w-full h-40 px-4 py-2 text-gray-700 bg-white border rounded-md  dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40"></textarea>
+            <textarea
+              name="address"
+              {...register("address")}
+              className="block w-full h-40 px-4 py-2 text-gray-700 bg-white border rounded-md  dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40"
+            ></textarea>
           </div>
           <div className="w-full mt-4">
             <label className="block mb-2 text-sm font-medium text-gray-600 dark:text-black">
               City
             </label>
 
-            <select name="city" {...register("city")} className="select select-primary w-full max-w-xs">
+            <select
+              name="city"
+              {...register("city")}
+              className="select select-primary w-full max-w-xs"
+            >
               <option disabled selected>
                 pick your city
               </option>
@@ -149,9 +157,24 @@ const MyProfile = () => {
               <option>Rajshahi</option>
             </select>
           </div>
+          <div className="w-full mx-2 mt-4 md:mt-0">
+            <label className="block mb-2 text-sm font-medium text-gray-600 dark:text-black">
+              Linkedin Profile
+            </label>
+
+            <input
+              name="linkedin"
+              {...register("linkedin")}
+              className="block w-full px-4 py-2 text-gray-700 bg-white border rounded-md  dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40"
+              type="url"
+            />
+          </div>
           <div className="flex justify-center mt-6">
-            <button type="submit" className="px-4 py-2 text-white transition-colors duration-200 transform bg-gray-700 rounded-md hover:bg-gray-600 focus:outline-none focus:bg-gray-600">
-              Send Message
+            <button
+              type="submit"
+              className="px-4 py-2 text-white transition-colors duration-200 transform bg-gray-700 rounded-md hover:bg-gray-600 focus:outline-none focus:bg-gray-600"
+            >
+              Save
             </button>
           </div>
         </div>
